@@ -31,7 +31,7 @@ class ClientsAddOrder extends Component
         $number_of_pieces,
         $order_value,
         $order_weight ,
-        $receiver_address, $police_file, $order_fees, $is_payment_on_delivery, $payment_method = 'balance', $status;
+        $receiver_address, $police_file, $order_fees, $is_payment_on_delivery, $payment_method = 'balance', $status ,$order_note ="" , $showCODPrice=false ;
     public $SenderSubArea, $ResevierSubArea, $SendingArea, $ResevingArea;
 
     public function mount($id)
@@ -49,6 +49,11 @@ class ClientsAddOrder extends Component
             $this->sender_area_id =  auth()->user()->area_id;
             $this->sender_sub_area_id = auth()->user()->sub_area_id;
             $this->sender_address = auth()->user()->address;
+
+            if($this->service_id == 1)
+        $this->showCODPrice =true;
+        else
+        $this->showCODPrice =false;
         }catch(Exception $e){
             throw abort(404);
         }
@@ -116,6 +121,7 @@ class ClientsAddOrder extends Component
                     $validatedData['client_id'] = auth()->user()->id;
                     $validatedData['representative_id'] = null;
                     $validatedData['status'] = 'pending';
+                    $validatedData['note'] = $this->order_note;
 
                 $order_id = Order::insertGetId($validatedData);
                 // insert order tracking

@@ -36,6 +36,8 @@
                 <div class="form-group">
                     <label for="">{{__('translation.status')}}</label>
                     <select class="form-control" name="" wire:model='order_status' id="">
+                    <option value="">{{__('translation.all_status')}}</option>
+
                         @foreach ($OrderStatus as $item => $i)
                         <option value="{{$item}}">{{__('translation.' . $item)}}</option>
                         @endforeach

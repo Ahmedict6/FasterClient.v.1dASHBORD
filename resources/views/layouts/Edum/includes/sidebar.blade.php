@@ -38,8 +38,8 @@
                     </span>
                 </a>
                 <ul aria-expanded="false" class="mm-collapse">
-                    <li class=""><a href="{{route('addOrder' , encrypt(1) )}}" class="">{{__('translation.shiping_to_shops')}}</a></li>
-                    <li class=""><a href="{{route('addOrder' , encrypt(2) )}}" class="">{{__('translation.deliverd_to_shops')}}</a></li>
+                    <li class=""><a href="{{route('addOrder' , encrypt(1) )}}" class="">{{__('translation.deliverd_to_shops')}}</a></li>
+                    <li class=""><a href="{{route('addOrder' , encrypt(2) )}}" class="">{{__('translation.shiping_to_shops')}}</a></li>
                     <li class=""><a href="{{route('addOrder' , encrypt(3) )}}" class="">{{__('translation.iternation_shipping')}}</a></li>
                 </ul>
             </li>

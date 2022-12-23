@@ -167,8 +167,10 @@
                                             {{__('translation.service.info')}}
                                         </h4>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-3">
+                                     <div class="row">
+                                     @if ($showCODPrice)
+
+                                     <div class="col-md-3">
                                             <fieldset class="form-group floating-label-form-group">
                                                 <label for="email">{{__('translation.order.fees')}}</label>
                                                 <input type="text" wire:model.defer="order_fees" class="form-control"
@@ -177,6 +179,7 @@
                                                     }}</span>@enderror
                                             </fieldset>
                                         </div>
+                                        @endif
                                             <div class='col-md-3'>
                                                 <fieldset class="form-group floating-label-form-group">
                                                     <label for="email">{{__('translation.number_of_paces')}}</label>
@@ -205,7 +208,16 @@
                                                         }}</span>@enderror
                                                 </fieldset>
                                             </div>
-                                    </div>
+                                          <div class='col-md-3'>
+                                                <fieldset class="form-group floating-label-form-group">
+                                                    <label
+                                                        for="email">{{__('translation.note')}}</label>
+                                                    <input type="text" wire:model.defer="order_note"
+                                                        class="form-control" placeholder="">
+                                                    @error('order_note') <span class="text-danger error">{{ $message
+                                                        }}</span>@enderror
+                                                </fieldset>
+                                            </div> </div>
                                 </div>
                                 <div class="card-footer">
                                     <div class="px-2">
