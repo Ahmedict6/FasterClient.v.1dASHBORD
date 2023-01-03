@@ -420,8 +420,8 @@ return [
     'returend_order' => 'استرجاع الطلبات',
     'next' => 'التالي',
     'my_orders' => 'طلباتي',
-    'shiping_to_shops' => 'شحن الطلابات الي المتاجر',
-    'deliverd_to_shops' => 'توصيل الطلابات الي المتاجر',
+    'shiping_to_shops' => 'شحن الطلبات  للمتاجر',
+    'deliverd_to_shops' => 'توصيل الطلبات للمتاجر',
     'iternation_shipping' => 'الشحن الدولي',
 
 
