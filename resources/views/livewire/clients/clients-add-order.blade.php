@@ -189,15 +189,7 @@
                                                         $message }}</span>@enderror
                                                 </fieldset>
                                             </div>
-                                            <div class='col-md-3'>
-                                                <fieldset class="form-group floating-label-form-group">
-                                                    <label for="email">{{__('translation.order_weight')}}</label>
-                                                    <input type="text" wire:model.defer="order_weight"
-                                                        class="form-control" placeholder="">
-                                                    @error('order_weight') <span class="text-danger error">{{ $message
-                                                        }}</span>@enderror
-                                                </fieldset>
-                                            </div>
+                                            
                                             <div class='col-md-3'>
                                                 <fieldset class="form-group floating-label-form-group">
                                                     <label
@@ -205,6 +197,15 @@
                                                     <input type="text" wire:model.defer="order_value"
                                                         class="form-control" placeholder="">
                                                     @error('order_value') <span class="text-danger error">{{ $message
+                                                        }}</span>@enderror
+                                                </fieldset>
+                                            </div>
+                                            <div class='col-md-3'>
+                                                <fieldset class="form-group floating-label-form-group">
+                                                    <label for="email">{{__('translation.order_weight')}}</label>
+                                                    <input type="text" wire:model.defer="order_weight"
+                                                        class="form-control" placeholder="">
+                                                    @error('order_weight') <span class="text-danger error">{{ $message
                                                         }}</span>@enderror
                                                 </fieldset>
                                             </div>
